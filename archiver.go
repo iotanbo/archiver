@@ -125,6 +125,9 @@ type File struct {
 type FileInfo struct {
 	os.FileInfo
 	CustomName string
+	// Stores path to the source.
+	// Used when reading a symlink.
+	SrcPath string
 }
 
 // Name returns fi.CustomName if not empty;
@@ -358,10 +361,11 @@ func isSymlink(fi os.FileInfo) bool {
 
 // within returns true if sub is within or equal to parent.
 func within(parent, sub string) bool {
-	rel, err := filepath.Rel(parent, sub)
+	rel, err := filepath.Rel(parent, sub) //rel
 	if err != nil {
 		return false
 	}
+	//return true
 	return !strings.Contains(rel, "..")
 }
 

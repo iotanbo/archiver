@@ -1,6 +1,17 @@
-# archiver [![archiver GoDoc](https://img.shields.io/badge/reference-godoc-blue.svg?style=flat-square)](https://pkg.go.dev/github.com/mholt/archiver?tab=doc) <a href="https://dev.azure.com/mholt-dev/Archiver/_build"><img src="https://img.shields.io/azure-devops/build/mholt-dev/1e14e7f7-f929-4fec-a1db-fa5a3c0d4ca9/2/master.svg?label=cross-platform%20tests&style=flat-square"></a>
+# archiver [![archiver GoDoc](https://img.shields.io/badge/reference-godoc-blue.svg?style=flat-square)](https://pkg.go.dev/github.com/mholt/archiver?tab=doc) <a href="https://dev.azure.com/mholt-dev/Archiver/_build"><img src="https://img.shields.io/azure-devops/build/mholt-dev/1e14e7f7-f929-4fec-a1db-fa5a3c0d4ca9/2/master.svg?label=cross-platform%20tests&style=flat-square"></a> [![Ubuntu-latest](https://github.com/iotanbo/archiver/actions/workflows/ubuntu-latest.yml/badge.svg)](https://github.com/iotanbo/archiver/actions/workflows/ubuntu-latest.yml) [![Macos-latest](https://github.com/iotanbo/archiver/actions/workflows/macos-latest.yml/badge.svg)](https://github.com/iotanbo/archiver/actions/workflows/macos-latest.yml) [![Windows-latest](https://github.com/iotanbo/archiver/actions/workflows/windows-latest.yml/badge.svg)](https://github.com/iotanbo/archiver/actions/workflows/windows-latest.yml)
 
-Introducing **Archiver 3.1** - a cross-platform, multi-format archive utility and Go library. A powerful and flexible library meets an elegant CLI in this generic replacement for several platform-specific or format-specific archive utilities.
+## Note
+This is a fork of https://github.com/mholt/archiver with some issues fixed.
+It is recommended to use the original package except if you need those urgent fixes.
+To use this package:
+
+```
+go get github.com/iotanbo/archiver/v3@v3.5.1-iotanbo
+import "github.com/iotanbo/archiver/v3"
+```
+## About
+
+Introducing **Archiver 3** - a cross-platform, multi-format archive utility and Go library. A powerful and flexible library meets an elegant CLI in this generic replacement for several platform-specific or format-specific archive utilities.
 
 ## Features
 
@@ -203,11 +214,11 @@ The archiver package allows you to easily create and open archives, walk their c
 To use as a dependency in your project:
 
 ```bash
-go get github.com/mholt/archiver/v3
+go get github.com/iotanbo/archiver/v3@v3.5.1-iotanbo
 ```
 
 ```go
-import "github.com/mholt/archiver/v3"
+import "github.com/iotanbo/archiver/v3"
 ```
 
 [See the package's GoDoc](https://pkg.go.dev/github.com/mholt/archiver?tab=doc) for full API documentation.
